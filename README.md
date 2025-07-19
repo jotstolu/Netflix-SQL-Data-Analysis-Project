@@ -53,6 +53,7 @@ WITH common_rating AS (
 )
 SELECT type, rating, total_count FROM common_rating WHERE rank = 1;
 ```
+![most_common_rating](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/2.%20Find%20the%20Most%20Common%20Rating%20for%20Movies%20and%20TV%20Shows.png?raw=true)
 
 -- 3. All Movies Released in 2021
 SELECT title, type, release_year
