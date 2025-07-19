@@ -93,10 +93,14 @@ WHERE date_added >= DATEADD(YEAR, -5, GETDATE());
 
 ![longest_movie](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/6.Find%20Content%20Added%20in%20the%20Last%205%20Years.png?raw=true)
 
--- 7. Movies/TV Shows by Director 'Rajiv Chilaka'
+**7. Movies/TV Shows by Director 'Rajiv Chilaka**
+```sql
 SELECT type, title, director
 FROM netflix_tb
 WHERE director LIKE '%Rajiv Chilaka%';
+```
+
+![Movies/TV](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/7.%20Find%20All%20MoviesTV%20Shows%20by%20Director%20'Rajiv%20Chilaka'.png?raw=true)
 
 -- 8. TV Shows with More Than 5 Seasons
 SELECT title, type, duration
