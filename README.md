@@ -35,16 +35,16 @@ The goal is to answer key business questions such as:
 
 ## SQL Queries
 
+**1. Count the Number of Movies vs TV Shows**
 ```sql
--- 1. Count the Number of Movies vs TV Shows
 SELECT type, COUNT(type) AS total_count
 FROM netflix_tb
 GROUP BY type;
 ```
 ![number_of_movies](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/1.%20Count%20the%20Number%20of%20Movies%20vs%20TV%20Shows.png?raw=true)
 
+**2. Most Common Rating for Movies and TV Shows**
 ```sql
--- 2. Most Common Rating for Movies and TV Shows
 WITH common_rating AS (
     SELECT type, rating, COUNT(*) AS total_count,
            RANK() OVER (PARTITION BY type ORDER BY COUNT(*) DESC) AS rank
@@ -55,8 +55,9 @@ SELECT type, rating, total_count FROM common_rating WHERE rank = 1;
 ```
 ![most_common_rating](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/2.%20Find%20the%20Most%20Common%20Rating%20for%20Movies%20and%20TV%20Shows.png?raw=true)
 
+
+**3. All Movies Released in 2021**
 ```sql
--- 3. All Movies Released in 2021
 SELECT title, type, release_year
 FROM netflix_tb
 WHERE type = 'Movie' AND release_year = 2021;
