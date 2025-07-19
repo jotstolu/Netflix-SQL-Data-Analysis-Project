@@ -41,6 +41,8 @@ SELECT type, COUNT(type) AS total_count
 FROM netflix_tb
 GROUP BY type;
 
+![number_of_movies](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/1.%20Count%20the%20Number%20of%20Movies%20vs%20TV%20Shows.png?raw=true)
+
 -- 2. Most Common Rating for Movies and TV Shows
 WITH common_rating AS (
     SELECT type, rating, COUNT(*) AS total_count,
@@ -141,5 +143,6 @@ FROM (
     FROM netflix_tb
 ) AS categorized_content
 GROUP BY category;
+```
 ---
 
