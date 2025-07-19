@@ -146,10 +146,13 @@ WHERE type = 'Movie' AND listed_in LIKE '%Documentaries%';
 ```
 ![Documentaries](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/11.%20List%20All%20Movies%20that%20are%20Documentaries.png?raw=true)
 
--- 12. All Content Without a Director
+**12. All Content Without a Director**
+```sql
 SELECT type, director
 FROM netflix_tb
 WHERE director IS NULL;
+```
+![content_without_director](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/12.%20Find%20All%20Content%20Without%20a%20Director.png?raw=true)
 
 -- 13. Movies Featuring 'Salman Khan' in Last 10 Years
 SELECT cast, title, release_year
