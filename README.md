@@ -90,7 +90,6 @@ SELECT title, date_added
 FROM netflix_tb
 WHERE date_added >= DATEADD(YEAR, -5, GETDATE());
 ```
-
 ![longest_movie](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/6.Find%20Content%20Added%20in%20the%20Last%205%20Years.png?raw=true)
 
 **7. Movies/TV Shows by Director 'Rajiv Chilaka**
@@ -99,7 +98,6 @@ SELECT type, title, director
 FROM netflix_tb
 WHERE director LIKE '%Rajiv Chilaka%';
 ```
-
 ![Movies/TV](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/7.%20Find%20All%20MoviesTV%20Shows%20by%20Director%20'Rajiv%20Chilaka'.png?raw=true)
 
 
@@ -178,7 +176,9 @@ ORDER BY COUNT(*) DESC;
 ```
 ![Top 10 Actors in Indian Movies](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/14.%20Find%20the%20Top%2010%20Actors%20Who%20Have%20Appeared%20in%20the%20Highest%20Number%20of%20Movies%20Produced%20in%20India.png?raw=true)
 
--- 15. Content Categorized by 'Kill' or 'Violence' Keywords
+**15. Content Categorized by 'Kill' or 'Violence' Keywords**
+
+```sql
 SELECT category, COUNT(*) AS content_count
 FROM (
     SELECT 
@@ -189,6 +189,7 @@ FROM (
     FROM netflix_tb
 ) AS categorized_content
 GROUP BY category;
-
+```
+![Content Categorized](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/15.%20Categorize%20Content%20Based%20on%20the%20Presence%20of%20'Kill'%20and%20'Violence'%20Keywords.png?raw=true)
 ---
 
