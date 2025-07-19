@@ -138,10 +138,13 @@ ORDER BY COUNT(*) DESC;
 ```
 ![Average_year](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/10.Find%20each%20year%20and%20the%20average%20numbers%20of%20content%20release%20in%20India%20on%20netflix..png?raw=true)
 
--- 11. All Movies that are Documentaries
+ **11. All Movies that are Documentaries**
+```sql
 SELECT title, type, listed_in
 FROM netflix_tb
 WHERE type = 'Movie' AND listed_in LIKE '%Documentaries%';
+```
+![Documentaries](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/11.%20List%20All%20Movies%20that%20are%20Documentaries.png?raw=true)
 
 -- 12. All Content Without a Director
 SELECT type, director
