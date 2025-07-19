@@ -102,10 +102,13 @@ WHERE director LIKE '%Rajiv Chilaka%';
 
 ![Movies/TV](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/7.%20Find%20All%20MoviesTV%20Shows%20by%20Director%20'Rajiv%20Chilaka'.png?raw=true)
 
--- 8. TV Shows with More Than 5 Seasons
+```sql
+8. TV Shows with More Than 5 Seasons
 SELECT title, type, duration
 FROM netflix_tb
 WHERE type = 'TV Show' AND duration > '5 Seasons';
+```
+![TV Shows](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/8.%20List%20All%20TV%20Shows%20with%20More%20Than%205%20Seasons.png?raw=true)
 
 -- 9. Number of Content Items per Genre
 SELECT TRIM(value) AS genre, COUNT(*) AS total_content
