@@ -40,9 +40,10 @@ The goal is to answer key business questions such as:
 SELECT type, COUNT(type) AS total_count
 FROM netflix_tb
 GROUP BY type;
-
+```
 ![number_of_movies](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/1.%20Count%20the%20Number%20of%20Movies%20vs%20TV%20Shows.png?raw=true)
 
+```sql
 -- 2. Most Common Rating for Movies and TV Shows
 WITH common_rating AS (
     SELECT type, rating, COUNT(*) AS total_count,
@@ -51,6 +52,7 @@ WITH common_rating AS (
     GROUP BY type, rating
 )
 SELECT type, rating, total_count FROM common_rating WHERE rank = 1;
+```
 
 -- 3. All Movies Released in 2021
 SELECT title, type, release_year
@@ -143,6 +145,6 @@ FROM (
     FROM netflix_tb
 ) AS categorized_content
 GROUP BY category;
-```
+
 ---
 
