@@ -84,10 +84,14 @@ WHERE type = 'Movie'
 ```
 ![longest_movie](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/5.%20Identify%20the%20Longest%20Movie.png?raw=true)
 
--- 6. Content Added in the Last 5 Years
+**6. Content Added in the Last 5 Years**
+```sql
 SELECT title, date_added
 FROM netflix_tb
 WHERE date_added >= DATEADD(YEAR, -5, GETDATE());
+```
+
+![longest_movie](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/6.Find%20Content%20Added%20in%20the%20Last%205%20Years.png?raw=true)
 
 -- 7. Movies/TV Shows by Director 'Rajiv Chilaka'
 SELECT type, title, director
