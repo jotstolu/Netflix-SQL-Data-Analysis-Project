@@ -64,12 +64,16 @@ WHERE type = 'Movie' AND release_year = 2021;
 ```
 ![movies_released](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/3.%20List%20All%20Movies%20released%20in%20year%202021.png?raw=true)
 
--- 4. Top 5 Countries with the Most Content
+ 
+**4. Top 5 Countries with the Most Content**
+```sql
 SELECT TOP (5) TRIM(value) AS country, COUNT(*) AS count
 FROM netflix_tb
 CROSS APPLY STRING_SPLIT(country, ',')
 GROUP BY TRIM(value)
 ORDER BY count DESC;
+```
+![Top_5_countries](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/4.%20Find%20the%20Top%205%20Countries%20with%20the%20Most%20Content%20on%20Netflix.png?raw=true)
 
 -- 5. Identify the Longest Movie
 SELECT title, duration
