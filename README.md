@@ -75,11 +75,14 @@ ORDER BY count DESC;
 ```
 ![Top_5_countries](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/4.%20Find%20the%20Top%205%20Countries%20with%20the%20Most%20Content%20on%20Netflix.png?raw=true)
 
--- 5. Identify the Longest Movie
+**5. Identify the Longest Movie**
+```sql
 SELECT title, duration
 FROM netflix_tb
 WHERE type = 'Movie'
   AND duration = (SELECT MAX(duration) FROM netflix_tb);
+```
+![longest_movie]https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/5.%20Identify%20the%20Longest%20Movie.png?raw=true
 
 -- 6. Content Added in the Last 5 Years
 SELECT title, date_added
