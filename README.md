@@ -154,11 +154,14 @@ WHERE director IS NULL;
 ```
 ![content_without_director](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/12.%20Find%20All%20Content%20Without%20a%20Director.png?raw=true)
 
--- 13. Movies Featuring 'Salman Khan' in Last 10 Years
+**13. Movies Featuring 'Salman Khan' in Last 10 Years**
+```sql
 SELECT cast, title, release_year
 FROM netflix_tb
 WHERE cast LIKE '%Salman Khan%'
   AND release_year > YEAR(GETDATE()) - 10;
+```
+![Movies Featuring 'Salman Khan'](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/13.%20Find%20How%20Many%20Movies%20Actor%20'Salman%20Khan'%20Appeared%20in%20the%20Last%2010%20Years.png?raw=true)
 
 -- 14. Top 10 Actors in Indian Movies
 SELECT TOP 10 
