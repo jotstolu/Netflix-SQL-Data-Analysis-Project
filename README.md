@@ -82,7 +82,7 @@ FROM netflix_tb
 WHERE type = 'Movie'
   AND duration = (SELECT MAX(duration) FROM netflix_tb);
 ```
-![longest_movie]https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/5.%20Identify%20the%20Longest%20Movie.png?raw=true
+![longest_movie](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/5.%20Identify%20the%20Longest%20Movie.png?raw=true)
 
 -- 6. Content Added in the Last 5 Years
 SELECT title, date_added
