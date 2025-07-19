@@ -102,8 +102,9 @@ WHERE director LIKE '%Rajiv Chilaka%';
 
 ![Movies/TV](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/7.%20Find%20All%20MoviesTV%20Shows%20by%20Director%20'Rajiv%20Chilaka'.png?raw=true)
 
+
+**8. TV Shows with More Than 5 Seasons**
 ```sql
-8. TV Shows with More Than 5 Seasons
 SELECT title, type, duration
 FROM netflix_tb
 WHERE type = 'TV Show' AND duration > '5 Seasons';
@@ -163,7 +164,9 @@ WHERE cast LIKE '%Salman Khan%'
 ```
 ![Movies Featuring 'Salman Khan'](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/13.%20Find%20How%20Many%20Movies%20Actor%20'Salman%20Khan'%20Appeared%20in%20the%20Last%2010%20Years.png?raw=true)
 
--- 14. Top 10 Actors in Indian Movies
+**14. Top 10 Actors in Indian Movies**
+
+```sql
 SELECT TOP 10 
     TRIM(value) AS actor,
     COUNT(*) AS appearances
@@ -172,6 +175,8 @@ CROSS APPLY STRING_SPLIT(cast, ',')
 WHERE country = 'India' AND cast IS NOT NULL
 GROUP BY TRIM(value)
 ORDER BY COUNT(*) DESC;
+```
+![Top 10 Actors in Indian Movies](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/14.%20Find%20the%20Top%2010%20Actors%20Who%20Have%20Appeared%20in%20the%20Highest%20Number%20of%20Movies%20Produced%20in%20India.png?raw=true)
 
 -- 15. Content Categorized by 'Kill' or 'Violence' Keywords
 SELECT category, COUNT(*) AS content_count
