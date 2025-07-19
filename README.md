@@ -111,7 +111,7 @@ WHERE type = 'TV Show' AND duration > '5 Seasons';
 ![TV Shows](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/8.%20List%20All%20TV%20Shows%20with%20More%20Than%205%20Seasons.png?raw=true)
 
 
-9. Number of Content Items per Genre
+**9. Number of Content Items per Genre**
 ```sql
 SELECT TRIM(value) AS genre, COUNT(*) AS total_content
 FROM netflix_tb
@@ -121,7 +121,8 @@ ORDER BY COUNT(*) DESC;
 ```
 ![number_of_content](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/9.%20Count%20the%20Number%20of%20Content%20Items%20in%20Each%20Genre.png?raw=true)
 
--- 10. Average Yearly Content Released in India
+**10. Average Yearly Content Released in India**
+```sql
 SELECT 
     YEAR(date_added) AS year,
     COUNT(*) AS total_content,
@@ -134,6 +135,8 @@ FROM netflix_tb
 WHERE country = 'India'
 GROUP BY YEAR(date_added)
 ORDER BY COUNT(*) DESC;
+```
+![Average_year](https://github.com/jotstolu/Netflix-SQL-Data-Analysis-Project/blob/main/assets/img/10.Find%20each%20year%20and%20the%20average%20numbers%20of%20content%20release%20in%20India%20on%20netflix..png?raw=true)
 
 -- 11. All Movies that are Documentaries
 SELECT title, type, listed_in
